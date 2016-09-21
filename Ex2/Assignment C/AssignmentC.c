@@ -15,7 +15,7 @@ int main() {
     int thread_number[] = {1,2,3,4,5};
 
     int err;
-    for(int i = 0; i < NTHREADS; i++) {
+    for(int i = 1; i < NTHREADS; i++) {
         err= pthread_create(&threads[i], NULL, use_resource, &thread_number[i]);
         if(err) {
             fprintf(stderr, "Error: pthread_create() return code %d\n",err);
